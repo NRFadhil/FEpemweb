@@ -25,8 +25,15 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('admin/validate',[App\Http\Controllers\AdminController::class, 
-    'showValidateForm'])->name('validateform.admin');
+// Route::get('admin/validate',[App\Http\Controllers\AdminController::class, 
+//     'showValidateForm'])->name('validateform.admin');
 
-Route::post('admin/validate',[App\Http\Controllers\AdminController::class,
-    'validateForm'])->name('validate.admin');
+// Route::post('admin/validate',[App\Http\Controllers\AdminController::class,
+//     'validateForm'])->name('validate.admin');
+
+Route::get('admin/validate',[App\Http\Controllers\AdminController::class, 
+    'showValidateForm'])->middleware(['auth'])>name('validateform.admin');
+
+
+Route::post('admin/validate',[App\Http\Controllers\AdminController::class, 
+    'validateForm'])->middleware(['auth'])>name('validate.admin');
