@@ -15,10 +15,12 @@ class AdminController extends Controller
     public function validateForm(Request $request)
     {
         $request->validate([
-        'username' => 'required|"admin"',
-        'password' =>  'required|"admin"'
+        'username' => 'required|string|min:5|max:5',
+        'password' =>  'required|string|min:5|max:5'
         ]);
 
-        return back()->with('success','Data valid');
+        if(username == 'admin' && password == 'admin'){
+            return back()->with('success','Data valid');
+        }
     }
 }
