@@ -13,14 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-			$table->string('nama');
-            $table->string('nik')->unique();
-			$table->string('notelp')->unique();
-			$table->timestamp('nik_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+        Schema::create('events', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -32,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('events');
     }
 };
