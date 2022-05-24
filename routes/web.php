@@ -13,34 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-Route::get('/beranda', function () {
-    return view('beranda');
+Route::get('/', function () {
+    return redirect('user/login');
 });
 
-Route::get('/exit', function () {
-    return view('exit');
-});
+//Route::get('/dashboard', function () {
+//    return view('dashboard');
+//})->middleware(['user'])->name('dashboard');
 
-Route::redirect('/','login');
+//Route::get('/exit', function () {
+//    return view('exit');
+//})->middleware(['user'])->name('exit');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
-
-Route::get('admin/validate',[App\Http\Controllers\AdminController::class, 
-    'showValidateForm'])->name('validateform.admin');
-
-Route::post('admin/validate',[App\Http\Controllers\AdminController::class,
-    'validateForm'])->name('validate.admin');
-
-// Route::get('admin/validate',[App\Http\Controllers\AdminController::class, 
-//     'showValidateForm'])->middleware(['auth'])>name('validateform.admin');
-
-
-// Route::post('admin/validate',[App\Http\Controllers\AdminController::class, 
-//     'validateForm'])->middleware(['auth'])>name('validate.admin');
+require __DIR__.'/user.php';require __DIR__.'/admin.php';
