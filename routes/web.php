@@ -17,6 +17,14 @@ Route::get('/', function () {
     return redirect('user/login');
 });
 
+Route::get('/dashboard_tambah', function () { 
+    return view('dashboard_tambah'); 
+   });
+
+   Route::get('/voting', function () { 
+    return view('voting'); 
+   });
+
 //Route::get('/dashboard', function () {
 //    return view('dashboard');
 //})->middleware(['user'])->name('dashboard');
