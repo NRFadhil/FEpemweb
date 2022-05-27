@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/dashboard_tambah.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard_edit_pengguna.css') }}" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid">
@@ -84,7 +84,7 @@
             <!-- akhir header -->
                
                 <div class="container mt-5">
-                    <h4><b>Tambah Peserta</b></h4>
+                    <h4><b>Edit Data</b></h4>
                         <div class="paralax">
                           <br>
                           <div class="row mx-3">
@@ -125,7 +125,7 @@
                                </table>
                                <div class="d-flex justify-content-center" style="padding-top:5rem ;">
 
-                                 <button type="submit" class="btn " style="background-color: #F4656E ; color:white;">Submit</button>
+                                 <button type="submit" class="btn " style="background-color: #FFBB37 ; color:white; width:100px;">edit</button>
                                </div>
                               </form>
                                 

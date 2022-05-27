@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/dashboard_tambah.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard_edit.css') }}" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid">
@@ -84,7 +84,7 @@
             <!-- akhir header -->
                
                 <div class="container mt-5">
-                    <h4><b>Tambah Peserta</b></h4>
+                    <h4><b>Edit Peserta</b></h4>
                         <div class="paralax">
                           <br>
                           <div class="row mx-3">
@@ -92,11 +92,11 @@
                                 <form method="" action="">
                                <table>
                                 <tr>
-                                  <td style="width:200px ;">Masukkan Nama</td>
+                                  <td style="width:200px ;">Nama</td>
                                   <td style="width:875px ;"><input type="text" name="nama" class="form-control mt-3" ></td>
                                 </tr>
                                 <tr>
-                                  <td>Masukkan NIK</td>
+                                  <td>NIK</td>
                                   <td><input type="text" name="nim" class="form-control mt-3" ></td>
                                 </tr>
                                 <tr>
@@ -125,7 +125,7 @@
                                </table>
                                <div class="d-flex justify-content-center" style="padding-top:5rem ;">
 
-                                 <button type="submit" class="btn " style="background-color: #F4656E ; color:white;">Submit</button>
+                                 <button type="submit" class="btn "  style="background-color: #F4656E ; color:white; width:100px;">Submit</button>
                                </div>
                               </form>
                                 

@@ -21,6 +21,14 @@ Route::get('/dashboard_tambah', function () {
     return view('dashboard_tambah'); 
    });
 
+   Route::get('/dashboard_edit', function () { 
+    return view('dashboard_edit'); 
+   });
+
+   Route::get('/dashboard_edit_pengguna', function () { 
+    return view('dashboard_edit_pengguna'); 
+   });
+
    Route::get('/voting', function () { 
     return view('voting'); 
    });
